@@ -22,25 +22,21 @@ mysql = MySQL(app)
 
 @app.route("/index", methods=['POST'])
 def move_forward():
-    #Moving forward code
-    # forward_message = "Moving Forward..."
-    return render_template("index.html")
-
-# @app.route("/register", methods=['POST'])
-# def move_forward1():
-#     #Moving forward code
-#     # forward_message = "Moving Forward..."
-#     return render_template("register.html")
+    return render_template("index.html")          #Moving forward code
 
 @app.route("/")
 def home():
-    # title1 = "YashNotchanged"
     return render_template("index.html")
 
+@app.route("/book", methods=['POST','GET'])
+def book():
+    return render_template("book.html")          #Moving forward code
 
+@app.route("/pathology", methods=['POST','GET'])
+def pathology():
+    return render_template("pathology.html")
 
-
-@app.route('/register', methods=['GET', 'POST'])
+@app.route("/register", methods=['GET', 'POST'])
 def register():
     if request.method == 'POST':
         # Fetch form data
@@ -61,7 +57,7 @@ def register():
         mysql.connection.commit()
         cur.close()
         return redirect('/user')
-    return render_template('register.html')
+    return render_template("register.html")
 
 @app.route('/user')
 def user():

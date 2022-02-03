@@ -117,6 +117,13 @@ h1
   top: 45%;
   left: 57%;
 }
+/*
+body h1{
+  margin-left: 30%;
+  margin-top: 10%;
+  font-size: 35px;
+  font-weight: bold;
+} */
 
 h3
 {
@@ -130,7 +137,33 @@ h3
   left: 50%;
 }
 
-button1{
+/* #register{
+  padding: 10px 75px;
+  background-color: #C53F3F;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor:pointer;
+  transition: all 0.5s ease 0s;
+} */
+                                    /* BUTTON CSS OF REGISTER */
+ .forform input[type=submit]{
+  padding: 10px 75px;
+  background-color: #C53F3F;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor:pointer;
+  transition: all 0.5s ease 0s;
+}
+
+.forform input[type=submit]:hover{
+  background-color: white;
+  color: #C53F3F;
+  box-shadow:0.8rem 0.8rem 0 rgba(12, 12, 12, 0.2);
+}
+
+/* button1{
   padding: 10px 75px;
   background-color: #C53F3F;
   color: white;
@@ -144,7 +177,7 @@ button1:hover{
     background-color: white;
     color: #C53F3F;
     box-shadow:0.8rem 0.8rem 0 rgba(12, 12, 12, 0.2);
-}
+} */
 
 span{
   color: #C53F3F;
@@ -185,7 +218,7 @@ h4
   right: 70%;
 }
 
-button2{
+/* button2{
   padding: 10px 75px;
   background-color: green;
   color: white;
@@ -199,7 +232,7 @@ button2:hover{
     background-color: white;
     color: green;
     box-shadow:0.8rem 0.8rem 0 rgba(12, 12, 12, 0.2);
-}
+} */
 
 span1{
   color: green;
