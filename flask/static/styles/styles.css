@@ -195,8 +195,9 @@ h3
 }
 
 .forform1 input[type=submit]:hover{
-  background-color: #489E60;
-  color: white;
+  background-color: #f6d06d;
+  border: 2.5px solid #f6d06d;
+  color: green;
   transform: translateY(-0.5%);
   box-shadow: 0 4rem 4rem rgba(0, 0, 0, 0.5);
 }
@@ -282,9 +283,9 @@ button2:hover{
 } */
 
 .content2{
-  background-color: #ecd4ff;
+  background-color: white;
   padding-top: 5%;
-  height: 100rem;
+  height: 90rem;
 }
 
 h5
@@ -297,7 +298,7 @@ h5
   font-weight: 800;
   color:#010032;
   position: absolute;
-  top: 235%;
+  top: 240%;
   left: 35%;
 }
 
@@ -309,7 +310,7 @@ h7
   text-align: center;
   font-family: 'Epilogue', sans-serif;
   position: absolute;
-  top: 255%;
+  top: 100%;
   left: 49%;
 }
 
@@ -352,13 +353,17 @@ h8
 }
 
 .profile-card{
-  display: flex;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  box-sizing: border-box;
   border-radius: 100px;
   align-items: center;
   width: 300px;
   text-align: center;
   justify-content: space-between;
-  grid-gap: 15em;
+  grid-gap: 8em;
   padding-left: 130px;
   padding-top: 180px;
   font-family: 'Epilogue', sans-serif;
@@ -366,9 +371,14 @@ h8
 
 .card-header{
   background: #010032;
-  padding: 50px 50px;
-  border-radius: 20px;
+  padding: 100px 70px;
   justify-content: center;
+}
+
+.card-header:hover{
+  transform: scale(1.1);
+  transition: 0.5s ease-in;
+  transition: 0.5s ease-out;
 }
 
 .pic{

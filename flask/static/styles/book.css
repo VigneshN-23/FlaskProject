@@ -148,19 +148,18 @@ width: 30%;
 padding: 1.5rem;
 font-size: 2rem;
 text-align: center;
-color: #3d6187;
-background-color: #DDEAF8;
-border: 2.5px solid ##3d6187;
+color: white;
+background-color: black;
+border: 2.5px solid white;
 transition: 0.2s;
-border-radius: 4rem;
 cursor: pointer;
 letter-spacing: 0.1rem;
-margin-left: 26rem;
+margin-left: 30rem;
 }
 
 .forform input[type=submit]:hover{
-background-color:#3d6187;
-color: #DDEAF8;
+background-color:white;
+color: black;
 transform: translateY(-0.5%);
 box-shadow: 0 4rem 4rem rgba(0, 0, 0, 0.5);
 }

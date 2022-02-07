@@ -34,6 +34,25 @@ def book():
 
 @app.route("/pathology", methods=['POST','GET'])
 def pathology():
+    if request.method == 'POST':
+        # Fetch form data
+        userDetails = request.form.get
+        Name = userDetails('full_name')
+        Gender = userDetails('radio')
+        AadharNumber = userDetails('aadhar')
+        Address = userDetails('address')
+        PhoneNumber = userDetails('phone')
+        Pincode = userDetails('pincode')
+        Fever = userDetails('fever')
+        LossOfSmellandTaste = userDetails('lossofsmelltaste')
+        Other = userDetails('other')
+        MedicalHistory = userDetails('medical')
+        AppointmentDate = userDetails('appointmentdate')
+        cur = mysql.connection.cursor()
+        cur.execute("INSERT INTO users(Name, Gender, AadharNumber, Address, PhoneNumber, Pincode, Fever, LossOfSmellandTaste, Other, MedicalHistory, AppointmentDate) VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",(Name, Gender, AadharNumber, Address, PhoneNumber, Pincode, Fever, LossOfSmellandTaste, Other, MedicalHistory, AppointmentDate))
+        mysql.connection.commit()
+        cur.close()
+        return redirect('/user')
     return render_template("pathology.html")
 
 @app.route("/register", methods=['GET', 'POST'])
