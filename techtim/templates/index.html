@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Navbar</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width", initial-scale="1">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link href="{{ url_for('static', filename='styles/styles.css') }}" rel="stylesheet" type="text/css" >
+    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
+    <link rel="stylesheet" href="book.html">
+    <!-- <link rel="stylesheet" href="book.css"> -->
+    <link href="{{ url_for('static', filename='styles/book.css') }}" rel="stylesheet" type="text/css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;700&display=swap" rel="stylesheet"> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;800&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,600;0,800;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="register.html">
+    <!-- <link rel="stylesheet" href="register.css"> -->
+    <link href="{{ url_for('static', filename='styles/register.css') }}" rel="stylesheet" type="text/css" >
+</head>
+<body>
+    <header>
+        <img class="logo" src="{{ url_for('static', filename='images/HEALTPLUS⁺.png') }}" height="75" >
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a>
+                    <ul>
+                        <li><a href="#ForCovid" style="background-color: #DDEAF8;">Covid Test</a></li>
+                        <li><a href="#Appointment" style="background-color: #DDEAF8;">Appointment</a></li>
+                    </ul>
+                </li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Feedback">Contact Us</a></li>
+            </ul>
+        </nav>
+        <a class="cta" href="#"><button>Sign Up</button></a>
+    </header>
+      <section>
+        <div id="ForCovid" class="ForCovid" data-aos="fade-right">
+          <img src="{{ url_for('static', filename='images/Vaccine-bro.png') }}" style="width:40%;">
+        </div>
+          <div class="content">
+            <h1>
+              <p>
+                <span>Stay </span>Safe, <span> Stay </span>Healthy.
+              </p>
+            </h1>
+            <h3>
+              <p>Showing symptoms for covid? Want to get yourself tested?</p>
+                    <p>You are at the right place </p>
+                    <p>
+                      &nbsp
+                    </p>
+                    <!-- <a class="btn2" href="register.html"> -->
+                      <!-- <button2>Book !</button2> -->
+                      <form method="get" action="/register" class="forform">
+                           <input type="submit" value="Register" name="register"/>
+                      </form>
+                    <!-- </a> -->
+            </h3>
+          </div>
+      </section>
+      <section style="padding-top:140px">
+        <div id="Appointment" class="Appointment" data-aos="fade-right">
+          <img src="{{ url_for('static', filename='images/Doctor-pana.png') }}" style="width:40%;margin-top:4%">
+        </div>
+          <div class="content1">
+            <h2>
+              Looking For Appointments?
+            </h2>
+            <h4>
+              <p>Book one right now</p>
+              <p>
+                &nbsp
+              </p>
+              <!-- <a class="btn2" href="book.html"> -->
+                <!-- <button2>Book !</button2> -->
+                <form method="post" action="/book" class="forform1" style="width: 50%; margin-left: 25%">
+                     <input type="submit" value="Book !" name="book"/>
+                </form>
+              <!-- </a> -->
+
+            </h4>
+          </div>
+      </section>
+      <div style="background-color:#ccdfd3;height:150px">
+        <p>
+          &nbsp
+        </p>
+      </div>
+      <section>
+        <div id="About" class="About">
+        </div>
+          <div class="content2" >
+            <h5>
+              Creators.
+            </h5>
+            <div class="profile-card">
+              <div class="card-header" data-aos="fade-up">
+                <div class="pic">
+                  <img src="{{ url_for('static', filename='images/Contact-Icon.png') }}" alt="">
+                </div>
+                <div class="name">Yash Kamble</div>
+                <div class="desc">Developer</div>
+                <div class="sm">
+                  <a href="#" class="fab fa-facebook-f"></a>
+                  <a href="#" class="fab fa-twitter"></a>
+                  <a href="#" class="fab fa-github"></a>
+                  <a href="#" class="fab fa-instagram"></a>
+                </div>
+                <a href="#" class="contact-btn">Contact Me</a>
+              </div>
+
+
+              <div class="card-header" data-aos="fade-down">
+                <div class="pic">
+                  <img src="{{ url_for('static', filename='images/Contact-Icon.png') }}" alt="">
+                </div>
+                <div class="name">Sreejit Nair</div>
+                <div class="desc">Developer</div>
+                <div class="sm">
+                  <a href="#" class="fab fa-facebook-f"></a>
+                  <a href="#" class="fab fa-twitter"></a>
+                  <a href="#" class="fab fa-github"></a>
+                  <a href="#" class="fab fa-instagram"></a>
+                </div>
+                <a href="#" class="contact-btn">Contact Me</a>
+              </div>
+
+
+              <div class="card-header" data-aos="fade-right">
+                <div class="pic">
+                  <img src="{{ url_for('static', filename='images/Contact-Icon.png') }}">
+                </div>
+                <div class="name">Vignesh Nair</div>
+                <div class="desc">Developer</div>
+                <div class="sm">
+                  <a href="#" class="fab fa-facebook-f"></a>
+                  <a href="#" class="fab fa-twitter"></a>
+                  <a href="#" class="fab fa-github"></a>
+                  <a href="#" class="fab fa-instagram"></a>
+                </div>
+                <a href="#" class="contact-btn">Contact Me</a>
+              </div>
+            </div>
+          </div>
+      </section>
+
+      <section style="padding-top:140px;background-color:#AAD4FF;height:70rem">
+        <div id="Feedback" class="container-1">
+    		<div class="contact-box">
+    			<div class="left">
+            <img src="{{ url_for('static', filename='images/Feedback.png') }}">
+          </div>
+    			<div class="right">
+    				<h2>Feedback.</h2>
+    				<input type="text" class="field" placeholder="Your Name...">
+    				<input type="text" class="field" placeholder="Your Email...">
+    				<input type="text" class="field" placeholder="Phone(+91)...">
+    				<textarea placeholder="Message..." class="field"></textarea>
+    				<button class="btn">Send</button>
+    			</div>
+    		</div>
+    	</div>
+      <div style="background-color: #AAD4FF;height: 100px">
+        <p>
+          &nbsp
+        </p>
+      </div>
+      </section>
+
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <script>
+        AOS.init({
+          offset: 300,
+          duration: 1000
+        });
+      </script>
+
+    </body>
+</html>
+
+<!-- Footer Section  -->
+
+<footer class="footer">
+<div class="container">
+<div class="row">
+  <div class="footer-col">
+    <h10>Company</h10>
+    <ul>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Our Services</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+      <li><a href="#">Affiliate Program</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h10>Get help</h10>
+    <ul>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#">Payment Options</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h10>Online </h10>
+    <ul>
+      <li><a href="#">+91-8668XXXXXX</a></li>
+      <li><a href="#">+91-9962XXXXXX</a></li>
+      <li><a href="#">For WhatsApp:</a></li>
+      <li><a href="#">+91-9328XXXXXX</a></li>
+      <li><a href="#">healthplus@gmail.com</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h10>Follow Us</h10>
+    <div class="social-links">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </div>
+</div>
+</div>
+</footer>
+
+
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    offset: 200,
+    duration: 1000
+  });
+</script>
+
+</body>
+
+</html>
