@@ -16,10 +16,12 @@
     <!-- <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;700&display=swap" rel="stylesheet"> -->
     <!-- <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;800&display=swap" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,600;0,800;1,500&display=swap" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css" rel="stylesheet">
     <link rel="stylesheet" href="register.html">
     <!-- <link rel="stylesheet" href="register.css"> -->
     <link href="{{ url_for('static', filename='styles/register.css') }}" rel="stylesheet" type="text/css" >
-    <link rel="shortcut icon" type="image/jpg" href="C:\Users\vinun\OneDrive\Desktop\DesktopImp\BackupProject\flask\static\images\HEALTPLUS⁺sav.png"/>
+    <!-- <link rel="shortcut icon" type="image/jpg" href="C:\Users\vinun\OneDrive\Desktop\DesktopImp\BackupProject\flask\static\images\HEALTHPLUS⁺favicon.png"/> -->
+    <link rel="icon" href="{{ url_for('static', filename='images/heart-removebg-preview.png') }}" type="image/jpeg">
 </head>
 <body>
     <header>
@@ -172,6 +174,52 @@
         </p>
       </div>
       </section>
+      <!-- <section style="padding-top:140px;background-color:#ccdfd3;height:70rem">
+      <div style="font-family:'Epilogue',sans-serif;margin-left:5%">
+        <p style="font-size:4em;">About The Disease</p>
+        <p style="font-size:7em;">Coronavirus Disease</p>
+        <p style="font-size:7em;">Outbreak Situation</p>
+        <p> &nbsp </p>
+        <p style="font-size:2em;">The risks of getting COVID-19 are higher in crowded and inadequately ventilated spaces where infected people spend long periods of time together in close proximity.</p>
+        <p style="font-size:2em;">Outbreaks have been reported in places where people have gather, often in crowded indoor settings and where they talk loudly, shout, breathe heavily or sing such as restaurants, choir practices, fitness classes, nightclubs, offices and places of worship.</p>
+        <p> &nbsp </p>
+        <span class="fas fa-check" style="color: #eb2226; font-size:3em"></span>
+         <a style="font-size:3em">Avoid touching your face.</a><p></p>
+        <span class="fas fa-check" style="color: #eb2226; font-size:3em"></span>
+         <a style="font-size:3em">Cover your mouth and nose when coughing.</a><p></p>
+        <span class="fas fa-check" style="color: #eb2226; font-size:3em"></span>
+         <a style="font-size:3em">Stay home if you feel unwell.</a>
+      </div> -->
+        <section style="padding-top:100px;background-color:#fffaf6;height:70rem">
+        <div class="container_1">
+          <div class="heading">
+              Counting Upto the Limit
+          </div>
+
+          <div class="counter-container">
+              <div class="counter" id="recover">
+                  <img src="static/images/regeneration.png" alt="timer" srcset="" class="icon">
+                  <p data-target="15000" class="count">0</p>
+                  <p>Work Hours</p>
+              </div>
+              <div class="counter"  id="cases">
+                  <img src="static/images/hospital-bed.png" alt="Coffee" srcset="" class="icon">
+                  <p data-target="1200" class="count">0</p>
+                  <p>Cups of Coffee</p>
+              </div>
+              <div class="counter" id="deaths">
+                  <img src="static/images/skull.png" alt="night" srcset="" class="icon">
+                  <p data-target="500" class="count">0</p>
+                  <p>Sleepless Nights</p>
+              </div>
+          </div>
+      </div>
+      <div style="background-color: #ccdfd3;height: 100%">
+        <p>
+          &nbsp
+        </p>
+      </div>
+      </section>
 
       <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
       <script>
@@ -237,7 +285,28 @@
     duration: 1000
   });
 </script>
+<script>
+const counters = document.querySelectorAll('.count');
+const speed = 200;
 
+counters.forEach( counter => {
+ const animate = () => {
+    const value = +counter.getAttribute('data-target');
+    const data = +counter.innerText;
+
+    const time = value / speed;
+   if(data < value) {
+        counter.innerText = Math.ceil(data + time);
+        setTimeout(animate, 1);
+      }else{
+        counter.innerText = value;
+      }
+
+ }
+
+ animate();
+});
+</script>
 </body>
 
 </html>

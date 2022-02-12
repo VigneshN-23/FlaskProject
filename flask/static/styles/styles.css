@@ -528,6 +528,34 @@ h8
   height: auto;
 }
 
+.heading{
+  font-family: 'Epilogue', sans-serif;
+  font-size: 7em;
+  color: #ecd4ff;
+  text-align: center;
+}
+
+.counter{
+  font-family: 'Epilogue', sans-serif;
+  font-size: 5em;
+  text-align: center;
+
+}
+.icon{
+  height: 2em;
+  width: 2em;
+}
+
+.counter-container{
+  margin-top:5%;
+  margin-left: 19%;
+}
+
+.counter-container .counter{
+  float: left;
+  height: 10%;
+  width: 25%;
+}
 /* Footer Section */
 
 .container{

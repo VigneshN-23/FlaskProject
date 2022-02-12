@@ -118,7 +118,7 @@ nav ul li ul li a:hover {
     font-size: 2rem;
     text-align: center;
     color: black;
-    background-color: #DDEAF8;
+    background-color: #fffaf6;
     transition: all 0.2s ease-in;
     border-radius: 4rem;
     cursor: pointer;
@@ -299,7 +299,7 @@ button:hover{
     box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: 0.2s;
-    border: 4px solid #d3dfec;
+    border-style: ridge;
     transition: 0.2s;
 }
 /* .grid:hover > .grid-item:not(:hover) {
@@ -320,7 +320,7 @@ button:hover{
 .card-content {
     padding: 3rem;
     font-family: 'Montserrat', sans-serif;
-    background-color: #DDEAF8;
+    background-color: #fffaf6;
 }
 
 .card-header {
