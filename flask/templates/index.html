@@ -151,7 +151,43 @@
             </div>
           </div>
       </section>
+      <section style="padding-top:200px;height:90rem">
+      <div class="container_1">
+        <div class="heading">
+          <p style="color:black">Counting <span1>Upto the Limit.</span1></p>
+          <p>
+            <sub style="font-size: 35px;color:#595959">[Covid-19 stats for <u>India</u>]</sub>
+          </p>
 
+        </div>
+
+        <div class="counter-container">
+            <div class="counter" id="recover">
+                <img src="static/images/regeneration.png" alt="timer" srcset="" class="icon">
+                <p>&nbsp</p>
+                <p data-target="41468120" class="count">0</p>
+                <p style="color:#595959; font-size:40px">Recoveries</p>
+            </div>
+            <div class="counter"  id="cases">
+                <img src="static/images/hospital-bed.png" alt="Coffee" srcset="" class="icon">
+                <p>&nbsp</p>
+                <p data-target="42586544" class="count">0</p>
+                <p style="color:#595959; font-size:40px">Active Cases</p>
+            </div>
+            <div class="counter" id="deaths">
+                <img src="static/images/skull.png" alt="night" srcset="" class="icon">
+                <p>&nbsp</p>
+                <p data-target="508012" class="count">0</p>
+                <p style="color:#595959; font-size:40px">Total Deaths</p>
+            </div>
+        </div>
+    </div>
+    <div style="background-color: #fffaf6;height: 100%">
+      <p>
+        &nbsp
+      </p>
+    </div>
+    </section>
       <section style="padding-top:140px;background-color:#ccdfd3;height:70rem">
         <div id="Feedback" class="container-1">
     		<div class="contact-box">
@@ -174,59 +210,34 @@
         </p>
       </div>
       </section>
-      <!-- <section style="padding-top:140px;background-color:#ccdfd3;height:70rem">
-      <div style="font-family:'Epilogue',sans-serif;margin-left:5%">
-        <p style="font-size:4em;">About The Disease</p>
-        <p style="font-size:7em;">Coronavirus Disease</p>
-        <p style="font-size:7em;">Outbreak Situation</p>
-        <p> &nbsp </p>
-        <p style="font-size:2em;">The risks of getting COVID-19 are higher in crowded and inadequately ventilated spaces where infected people spend long periods of time together in close proximity.</p>
-        <p style="font-size:2em;">Outbreaks have been reported in places where people have gather, often in crowded indoor settings and where they talk loudly, shout, breathe heavily or sing such as restaurants, choir practices, fitness classes, nightclubs, offices and places of worship.</p>
-        <p> &nbsp </p>
-        <span class="fas fa-check" style="color: #eb2226; font-size:3em"></span>
-         <a style="font-size:3em">Avoid touching your face.</a><p></p>
-        <span class="fas fa-check" style="color: #eb2226; font-size:3em"></span>
-         <a style="font-size:3em">Cover your mouth and nose when coughing.</a><p></p>
-        <span class="fas fa-check" style="color: #eb2226; font-size:3em"></span>
-         <a style="font-size:3em">Stay home if you feel unwell.</a>
-      </div> -->
-        <section style="padding-top:100px;background-color:#fffaf6;height:70rem">
-        <div class="container_1">
-          <div class="heading">
-              Counting Upto the Limit
-          </div>
-
-          <div class="counter-container">
-              <div class="counter" id="recover">
-                  <img src="static/images/regeneration.png" alt="timer" srcset="" class="icon">
-                  <p data-target="15000" class="count">0</p>
-                  <p>Work Hours</p>
-              </div>
-              <div class="counter"  id="cases">
-                  <img src="static/images/hospital-bed.png" alt="Coffee" srcset="" class="icon">
-                  <p data-target="1200" class="count">0</p>
-                  <p>Cups of Coffee</p>
-              </div>
-              <div class="counter" id="deaths">
-                  <img src="static/images/skull.png" alt="night" srcset="" class="icon">
-                  <p data-target="500" class="count">0</p>
-                  <p>Sleepless Nights</p>
-              </div>
-          </div>
-      </div>
-      <div style="background-color: #ccdfd3;height: 100%">
-        <p>
-          &nbsp
-        </p>
-      </div>
-      </section>
-
       <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
       <script>
         AOS.init({
           offset: 300,
           duration: 1000
         });
+      </script>
+      <script>
+      const counters = document.querySelectorAll('.count');
+      const speed = 300;
+
+      counters.forEach( counter => {
+       const animate = () => {
+          const value = +counter.getAttribute('data-target');
+          const data = +counter.innerText;
+
+          const time = value / speed;
+         if(data < value) {
+              counter.innerText = Math.ceil(data + time);
+              setTimeout(animate, 1);
+            }else{
+              counter.innerText = value;
+            }
+
+       }
+
+       animate();
+      });
       </script>
 
     </body>
@@ -284,28 +295,6 @@
     offset: 200,
     duration: 1000
   });
-</script>
-<script>
-const counters = document.querySelectorAll('.count');
-const speed = 200;
-
-counters.forEach( counter => {
- const animate = () => {
-    const value = +counter.getAttribute('data-target');
-    const data = +counter.innerText;
-
-    const time = value / speed;
-   if(data < value) {
-        counter.innerText = Math.ceil(data + time);
-        setTimeout(animate, 1);
-      }else{
-        counter.innerText = value;
-      }
-
- }
-
- animate();
-});
 </script>
 </body>
 

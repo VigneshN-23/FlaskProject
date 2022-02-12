@@ -531,8 +531,11 @@ h8
 .heading{
   font-family: 'Epilogue', sans-serif;
   font-size: 7em;
-  color: #ecd4ff;
+  color: #fffaf6;
   text-align: center;
+}
+span1{
+  color: #d09dd3;
 }
 
 .counter{
@@ -541,14 +544,39 @@ h8
   text-align: center;
 
 }
+
+#deaths.counter{
+  margin-left: 10%;
+}
+
+#deaths.counter:hover{
+  transform: translateY(-10%);
+  transition: 0.5s;
+}
+
+#cases.counter:hover{
+  transform: translateY(-10%);
+  transition: 0.5s;
+}
+
+#recover.counter{
+  margin-right: 10%;
+}
+
+#recover.counter:hover{
+  transform: translateY(-10%);
+  transition: 0.5s;
+}
+
 .icon{
   height: 2em;
   width: 2em;
 }
 
+
 .counter-container{
   margin-top:5%;
-  margin-left: 19%;
+  margin-left: 6%;
 }
 
 .counter-container .counter{
@@ -725,7 +753,7 @@ h10{
 }
 
 .field::placeholder{
-  color: #150590;
+  color: #8576fa;
   opacity: 1;
 }
 
